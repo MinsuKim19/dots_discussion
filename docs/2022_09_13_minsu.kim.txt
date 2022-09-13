@@ -1,31 +1,33 @@
-- 참고
-  https://github.com/Unity-Technologies/UniteAustinTechnicalPresentation  
-  Austin 프레젠테이션 용 샘플.
-  ECS 0.50.1으로 컨버팅 하려면 추가 작업 필요
-  [Inject] 부분을 수정해 줘야 함
+참고
+ - https://github.com/Unity-Technologies/UniteAustinTechnicalPresentation  
+   Austin 프레젠테이션 용 샘플.
+   ECS 0.50.1으로 컨버팅 하려면 추가 작업 필요
+   [Inject] 부분을 수정해 줘야 함
   
-- https://www.youtube.com/watch?v=p4ct4vHWYt0&list=PLX2vGYjWbI0TMJrYFmLi-inr7DiIkGO4W&index=7
-  GDC 2022 
+ - GDC 2022 
+   https://www.youtube.com/watch?v=p4ct4vHWYt0&list=PLX2vGYjWbI0TMJrYFmLi-inr7DiIkGO4W&index=7
   
-- https://youtu.be/p4ct4vHWYt0?list=PLX2vGYjWbI0TMJrYFmLi-inr7DiIkGO4W&t=303
-  [Baker]
-  Authoring -> Runtime Conversion용 클래스로 Baker가 있다는데 미래에 추가될 듯 함. 아직 0.50.1 버전에는 없음.
-  
-- [Inject] 
-  https://github.com/Unity-Technologies/UniteAustinTechnicalPresentation/blob/master/StressTesting/Assets/Scripts/Navigation/CrowdSystem.cs
-  
+ - [Baker]
+   Authoring -> Runtime Conversion용 클래스로 Baker가 있다는데 미래에 추가될 듯 함. 아직 0.50.1 버전에는 없음.
+   https://youtu.be/p4ct4vHWYt0?list=PLX2vGYjWbI0TMJrYFmLi-inr7DiIkGO4W&t=303
 
+ - 교육용 과제. Monobehavior로 만들어진 샘플을 DOTS 변환해보는 트레이닝  
+   https://github.com/Unity-Technologies/DOTS-training-samples
+   
+
+ - ECS 샘플
+   https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples
+  
+ - SubScene을 사용하면 EditMode에서도 Entity사용(출력 ?)가능. Prefab을 사용 하는 것보다 로딩 속도도 빠름
+   EntityComponentSystemSamples에 포함 된 GridCube씬 안의 Grid SubScene에서 확인 가능  
+ 
+ - 이동 애니메이션 이용 샘플 중에 Position, Rotation 데이타를 Buffer에 저장해서 사용하는 샘플도 있음
+   EntityComponentSystemSamples에 포함 된 Boid씬안의 Simulation SubScene의 Shark GameObject 에서 확인 가능
+   
+
+샘플 프로젝트
 - TextureAnimationSystem : material 하나만 적용 중이라 수정 필요.
-
-- SubScene을 사용하면 EditMode에서도 Entity사용(출력 ?)가능. Prefab을 사용 하는 것보다 로딩 속도도 빠름
-  EntityComponentSystemSamples에 포함 된 GridCube씬 안의 Grid SubScene에서 확인 가능
+- CrowdSystem : ECS에서 Nav mesh를 이용해 길찾기 하는 시스템
 
 
-- 이동 애니메이션 이용 샘플 중에 Position, Rotation 데이타를 Buffer에 저장해서 사용하는 샘플도 있음
-  EntityComponentSystemSamples에 포함 된 Boid씬안의 Simulation SubScene의 Shark GameObject 에서 확인 가능
-  TransformRecorderAuthoring
 
-- CrowdSystem 
-
-- https://github.com/Unity-Technologies/DOTS-training-samples
-  교육용 과제. Monobehavior로 만들어진 샘플을 DOTS 변환해보는 트레이닝
