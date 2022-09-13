@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: UI Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d708f800b49336a409dfb0ff0b34dc94
+  m_SerializeEntries:
+  - m_GUID: 88391a209c4e6474cbb64a9c79df2046
+    m_Address: Assets/BundleAsset/UI/Sprite/rect.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8ce4881eed84bd140b36098548235008
+    m_Address: Assets/BundleAsset/UI/Sprite/circle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2a9a0da75d7e9d149aca755fb10fde44
+    m_Address: Assets/BundleAsset/UI/Sprite/round_rect.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ceae99c33f1f83b44bd5502df28c4214
+    m_Address: Assets/BundleAsset/UI/Atlas/UIAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d595412ed0ebac34ba06a2fa8985418a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a782ef39770b517489ce2782b29cbc2d, type: 2}
+    - {fileID: 11400000, guid: c8cf26365202f4d4b9efd498bd20f512, type: 2}
