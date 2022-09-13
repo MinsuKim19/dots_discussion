@@ -16,6 +16,11 @@
   
 
 - TextureAnimationSystem : material 하나만 적용 중이라 수정 필요.
+
+- SubScene을 사용하면 EditMode에서도 Entity사용(출력 ?)가능. Prefab을 사용 하는 것보다 로딩 속도도 빠름
+  EntityComponentSystemSamples에 포함 된 GridCube씬 안의 Grid SubScene에서 확인 가능
+
+
 - 이동 애니메이션 이용 샘플 중에 Position, Rotation 데이타를 Buffer에 저장해서 사용하는 샘플도 있음
   EntityComponentSystemSamples에 포함 된 Boid씬안의 Simulation SubScene의 Shark GameObject 에서 확인 가능
   TransformRecorderAuthoring
