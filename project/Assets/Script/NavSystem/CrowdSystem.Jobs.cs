@@ -28,8 +28,6 @@ public partial class CrowdSystem : SystemBase
 
         public void Execute()
         {
-            Debug.Log("MakePathRequestsJob.Execute");
-
             if (agents.Length == 0)
                 return;
 
@@ -98,7 +96,6 @@ public partial class CrowdSystem : SystemBase
 
         public void Execute()
         {
-            Debug.Log("UpdateQueriesJob.Execute");
             queryQueue.UpdateTimesliced(maxIterations);
         }
     }
@@ -112,8 +109,6 @@ public partial class CrowdSystem : SystemBase
 
         public void Execute()
         {
-            Debug.Log("EnqueueRequestsInQueriesJob.Execute");
-
             var reqCount = pathRequestsRange[PRRCount];
             if (reqCount == 0)
                 return;
@@ -150,8 +145,6 @@ public partial class CrowdSystem : SystemBase
 
         public void Execute()
         {
-            Debug.Log("ForgetMovedRequestsJob.Execute");
-
             var dst = 0;
             var src = pathRequestsRange[PRRStart];
             if (src > dst)
@@ -184,8 +177,6 @@ public partial class CrowdSystem : SystemBase
 
         public void Execute()
         {
-            Debug.Log("ApplyQueryResultsJob.Execute");
-
             if (queryQueue.GetResultPathsCount() > 0)
             {
                 queryQueue.CopyResultsTo(in paths, ref agentNavigators);
@@ -205,8 +196,6 @@ public partial class CrowdSystem : SystemBase
 
         public void Execute(int index)
         {
-            Debug.Log("AdvancePathJob.Execute");
-
             var agentNavigator = agentNavigators[index];
             if (agentNavigator.active == 0)
                 return;
@@ -265,16 +254,13 @@ public partial class CrowdSystem : SystemBase
 
         public void Execute()
         {
-            Debug.Log("MoveLocationsJob.Execute");
-
-            int count = agents.Length;
-            for(int i = 0; i < count; ++i)
+            for(int i = 0, count = agents.Length; i < count; ++i)
             {
                 ExecuteElem(i);
             }
         }
 
-        public void ExecuteElem(int index)
+        void ExecuteElem(int index)
         {
             var agent = agents[index];
             var wantedPos = agent.worldPosition + agent.velocity * dt;
@@ -304,8 +290,6 @@ public partial class CrowdSystem : SystemBase
 
         public void Execute()
         {
-            Debug.Log("QueryCleanupJob.Execute");
-
             queryQueue.CleanupProcessedRequests(ref pathRequestIdForAgent);
         }
     }
@@ -335,8 +319,6 @@ public partial class CrowdSystem : SystemBase
 
         public void Execute()
         {
-            Debug.Log("UpdateVelocityJob.Execute");
-
             int count = agents.Length;
             for(int i = 0; i < count; ++i)
             {

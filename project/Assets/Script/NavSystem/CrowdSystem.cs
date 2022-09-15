@@ -287,7 +287,7 @@ public partial class CrowdSystem : SystemBase
         };
         var afterVelocitiesUpdated = vel.Schedule(afterPathsTrimmed);
         navMeshWorld.AddDependency(afterVelocitiesUpdated);
-        
+
         var move = new MoveLocationsJob { query = NavMeshQuery, agents = unitSystem.Agents, dt = UnityEngine.Time.deltaTime };
         var afterAgentsMoved = move.Schedule(afterVelocitiesUpdated);
         navMeshWorld.AddDependency(afterAgentsMoved);

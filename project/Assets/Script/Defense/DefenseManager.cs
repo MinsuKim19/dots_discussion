@@ -28,8 +28,6 @@ public class DefenseManager : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log("DefenseManager.Update");
-
         SpawnAllyCoolTime -= Time.deltaTime;
 
         if(SpawnAllyCoolTime < 0)
