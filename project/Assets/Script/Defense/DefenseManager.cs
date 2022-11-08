@@ -12,18 +12,9 @@ public class DefenseManager : MonoBehaviour
     public Transform EnemySpawnPoint;
     public float SpawnAllyCoolTime = 1f;
 
-    EntityManager EntityManager;
-
-    TextureAnimatorSystem textureAnimatorSystem;
-
     public void Awake()
     {
         DefenseSetting.SetInstance(defenseSetting);
-
-        EntityManager = Unity.Entities.World.DefaultGameObjectInjectionWorld.EntityManager;
-        var navMeshWorld = NavMeshWorld.GetDefaultWorld();
-
-        textureAnimatorSystem = Unity.Entities.World.DefaultGameObjectInjectionWorld.GetExistingSystem<TextureAnimatorSystem>();
     }
 
     public void Update()
